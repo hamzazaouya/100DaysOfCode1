@@ -38,17 +38,6 @@ class _HomePageState extends State<HomePage> {
                       child: const Text("Button One"),
                     );
                   }),
-                  Consumer<ModelOne>(builder: (context, value, child) {
-                    print("Button two");
-                    return MaterialButton(
-                      color: Colors.blue,
-                      textColor: Colors.white,
-                      onPressed: () {
-                        value.changeNameTwo();
-                      },
-                      child: const Text("Button Two"),
-                    );
-                  }),
                 ],
               ),
             )));
@@ -59,12 +48,12 @@ class ModelOne extends ChangeNotifier {
   String nameOne = "Welcome1";
   String nametwo = "Welcome2";
   changeNameOne() {
-    nameOne = "Welcme To Model One";
+    nameOne = "Welcome To Model One";
     notifyListeners();
   }
 
   changeNameTwo() {
-    nameOne = "Welcme To Model Two";
+    nameOne = "Welcome To Model Two";
     notifyListeners();
   }
 }
